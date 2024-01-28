@@ -24,7 +24,9 @@
         padding: 40px;
         display: none;
     }
-
+    #connect{
+        display:none;
+    }
     nav {
         position: fixed;
         top: 0%;

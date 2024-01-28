@@ -84,6 +84,7 @@ $(document).ready(function () {
   var skillsPage = $(".skillsPage");
   var educationPage = $(".educationPage");
   var projectPage = $(".projectsPage");
+  var connectPage = $(".connectPage");
 
   // Content tags and ids
   var homeDiv = $("#home");
@@ -91,6 +92,7 @@ $(document).ready(function () {
   var skillsDiv = $("#skills");
   var educationDiv = $("#education");
   var projectDiv = $("#projects");
+  var conncetDiv = $("#connect");
 
   //Mobile Menu bar
   $("#btn-menu").on("click", function () {
@@ -100,6 +102,7 @@ $(document).ready(function () {
   //content passed inside addClass or removeClass
   var remBar = "text-gray-300 hover:bg-gray-700 hover:text-white";
   var currentBar = "bg-gray-900 text-white";
+
   // Home page implementation
   homePage.on("click", function () {
     homeDiv.show();
@@ -107,6 +110,7 @@ $(document).ready(function () {
     skillsDiv.hide();
     educationDiv.hide();
     projectDiv.hide();
+    conncetDiv.hide();
 
     //css effect styling for nav-bar dynamicall
     homePage.removeClass(remBar);
@@ -114,12 +118,14 @@ $(document).ready(function () {
     skillsPage.removeClass(currentBar);
     educationPage.removeClass(currentBar);
     projectPage.removeClass(currentBar);
+    connectPage.removeClass(currentBar);
 
     homePage.addClass(currentBar);
     aboutPage.addClass(remBar);
     skillsPage.addClass(remBar);
     educationPage.addClass(remBar);
     projectPage.addClass(remBar);
+    connectPage.addClass(remBar);
   });
 
   //about page implementation
@@ -129,6 +135,7 @@ $(document).ready(function () {
     skillsDiv.hide();
     educationDiv.hide();
     projectDiv.hide();
+    conncetDiv.hide();
 
     //css effect styling for nav-bar dynamicall
     homePage.removeClass(currentBar);
@@ -136,12 +143,14 @@ $(document).ready(function () {
     skillsPage.removeClass(currentBar);
     educationPage.removeClass(currentBar);
     projectPage.removeClass(currentBar);
+    connectPage.removeClass(currentBar);
 
     homePage.addClass(remBar);
     aboutPage.addClass(currentBar);
     skillsPage.addClass(remBar);
     educationPage.addClass(remBar);
     projectPage.addClass(remBar);
+    connectPage.addClass(remBar);
   });
 
   //skills page implementation
@@ -151,6 +160,7 @@ $(document).ready(function () {
     skillsDiv.show();
     educationDiv.hide();
     projectDiv.hide();
+    conncetDiv.hide();
 
     // text-gray-300 hover:bg-gray-700 hover:text-white"
 
@@ -159,12 +169,14 @@ $(document).ready(function () {
     skillsPage.removeClass(remBar);
     educationPage.removeClass(currentBar);
     projectPage.removeClass(currentBar);
+    connectPage.removeClass(currentBar);
 
     homePage.addClass(remBar);
     aboutPage.addClass(remBar);
     skillsPage.addClass(currentBar);
     educationPage.addClass(remBar);
     projectPage.addClass(remBar);
+    connectPage.addClass(remBar);
   });
 
   //education page implementation
@@ -174,6 +186,7 @@ $(document).ready(function () {
     skillsDiv.hide();
     educationDiv.show();
     projectDiv.hide();
+    conncetDiv.hide();
 
     //css effect styling for nav-bar dynamicall
 
@@ -182,12 +195,14 @@ $(document).ready(function () {
     skillsPage.removeClass(currentBar);
     educationPage.removeClass(remBar);
     projectPage.removeClass(currentBar);
+    connectPage.removeClass(currentBar);
 
     homePage.addClass(remBar);
     aboutPage.addClass(remBar);
     skillsPage.addClass(remBar);
     educationPage.addClass(currentBar);
     projectPage.addClass(remBar);
+    connectPage.addClass(remBar);
   });
 
   //projects page implementation
@@ -197,6 +212,7 @@ $(document).ready(function () {
     skillsDiv.hide();
     educationDiv.hide();
     projectDiv.show();
+    conncetDiv.hide();
 
     //css effect styling for nav-bar dynamicall
     homePage.removeClass(currentBar);
@@ -204,11 +220,61 @@ $(document).ready(function () {
     skillsPage.removeClass(currentBar);
     educationPage.removeClass(currentBar);
     projectPage.removeClass(remBar);
+    connectPage.removeClass(currentBar);
 
     homePage.addClass(remBar);
     aboutPage.addClass(remBar);
     skillsPage.addClass(remBar);
     educationPage.addClass(remBar);
     projectPage.addClass(currentBar);
+    connectPage.addClass(remBar);
+  });
+
+  //connect page implementation
+  connectPage.on("click", function () {
+    homeDiv.hide();
+    aboutDiv.hide();
+    skillsDiv.hide();
+    educationDiv.hide();
+    projectDiv.hide();
+    conncetDiv.show();
+
+    //css effect styling for nav-bar dynamicall
+    homePage.removeClass(currentBar);
+    aboutPage.removeClass(currentBar);
+    skillsPage.removeClass(currentBar);
+    educationPage.removeClass(currentBar);
+    projectPage.removeClass(currentBar);
+    connectPage.removeClass(remBar);
+
+    homePage.addClass(remBar);
+    aboutPage.addClass(remBar);
+    skillsPage.addClass(remBar);
+    educationPage.addClass(remBar);
+    projectPage.addClass(remBar);
+    connectPage.addClass(currentBar);
   });
 });
+
+//EmailJs implementation
+function sendMail() {
+  var params = {
+    name: document.getElementById("name").value,
+    email: document.getElementById("email").value,
+    message: document.getElementById("message").value,
+  };
+
+  const serviceID = "service_93c0i13";
+  const templateID = "template_gnc4ol6";
+
+  emailjs
+    .send(serviceID, templateID, params)
+    .then((res) => {
+      document.getElementById("name").value = "";
+      document.getElementById("email").value = "";
+      document.getElementById("message").value = "";
+      console.log(res);
+      alert("Your message sent successfully!!");
+    })
+    .catch((err) => console.log(err));
+}

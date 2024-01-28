@@ -19,7 +19,7 @@
 <body>
     <!-- Your content goes here -->
     <nav class="bg-gray-800 fixed w-full z-20">
-        <div class="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
+        <div class="mx-auto max-w-7xl px-2 md:px-6 lg:px-8">
             <div class="relative flex h-16 items-center justify-between">
                 <div class="absolute inset-y-0 left-0 flex items-center sm:hidden">
                     <!-- Mobile menu button-->
@@ -49,12 +49,12 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                <div class="flex flex-1 items-center justify-center md:items-stretch md:justify-start">
                     <div class="flex flex-shrink-0 items-center">
                         <img class="h-8 w-auto" src="images/tab-icon-01.png" alt="Your Company">
                         <span class="text-white pl-2">Balasubramani Elamurugan</span>
                     </div>
-                    <div class="hidden sm:ml-6 sm:block">
+                    <div class="hidden md:ml-6 md:block">
                         <div class="flex space-x-2">
                             <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                             <a href="#home"
@@ -71,6 +71,8 @@
                             <a href="https://drive.google.com/file/d/1cQtwZ9AxAheS6k3BEfuWN-ABAexLfZMU/view?usp=sharing"
                                 target="_blank"
                                 class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Resume</a>
+                            <a href="#connect"
+                                class="connectPage text-gray-300 top hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Connect</a>
                         </div>
                     </div>
                 </div>
@@ -79,7 +81,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="sm:hidden" id="mobile-menu">
+        <div class="md:hidden" id="mobile-menu">
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="#home" class="homePage bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
@@ -95,6 +97,8 @@
                 <a href="https://drive.google.com/file/d/1cQtwZ9AxAheS6k3BEfuWN-ABAexLfZMU/view?usp=sharing"
                     target="_blank"
                     class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Resume</a>
+                <a href="#connect"
+                    class="connectPage text-gray-300 top hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Connect</a>
             </div>
         </div>
     </nav>
@@ -460,6 +464,62 @@
     </footer>
 
     <!-- Our codes -->
+    <div id="connect"
+        class="relative top-4 lg:top-10 md:break-normal break-all w-full text-md sm:text-xl text-md my-10 lg:my-0 p-0  sm:py-10 py-5  sm:px-10 px-2.5 leading-normal antialiased font-semibold">
+        <div class="absolute sm:left-1/3 left-8 top-3/4 bg-gray-800 justify-center items-center sm:p-8 px-2.5">
+            <h3 class="text-center text-3xl font-bold text-white">Connect via Email</h3>
+            <div class="flex flex-col text-white ">
+
+                <!-- name -->
+                <div class="w-full mb-1">
+                    <label for="username">Name</label>
+                    <div
+                        class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                        <input
+                            class="block flex-1 border-0 bg-transparent py-1.5 pl-1 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                            type="text" name="username" id="username">
+                    </div>
+                </div>
+
+                <!-- mail-id -->
+                <div class=" mb-1">
+                    <label for="mail-id">Email</label>
+                    <div
+                        class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                        <input
+                            class="block flex-1 border-0 bg-transparent py-1.5 pl-1 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                            type="email" name="mail-id" id="mail-id">
+                    </div>
+                </div>
+
+                <!-- phone-no  -->
+                <div class=" mb-1">
+                    <label for="phone-no">Phone-no</label>
+                    <div
+                        class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                        <input
+                            class="block flex-1 border-0 bg-transparent py-1.5 pl-1 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                            minlength="10" maxlength="12" type="number" name="phone-no" id="phone-no">
+                    </div>
+                </div>
+                <!-- description -->
+                <div class=" mb-1">
+                    <label for="description">Description</label>
+                    <div
+                        class="flex rounded-md shadow-sm ring-1 ring-inset ring-gray-300 focus-within:ring-2 focus-within:ring-inset focus-within:ring-indigo-600 sm:max-w-md">
+                        <textarea
+                            class="block flex-1 border-0 bg-transparent py-1.5 pl-1 placeholder:text-gray-400 focus:ring-0 sm:text-sm sm:leading-6"
+                            id="description" name="description" cols="6" rows="3"></textarea>
+                    </div>
+                </div>
+                <!-- send-btn -->
+                <div class="flex justify-center mb-1">
+                    <button onclick="sendMail()" class="bg-white text-gray-800 px-5 py-3 text-center mt-4" id="send-btn"
+                        type="submit">Send</button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 </body>
 <script src="https://code.jquery.com/jquery-3.7.1.js" integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
