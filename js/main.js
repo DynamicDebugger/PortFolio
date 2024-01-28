@@ -62,7 +62,13 @@ miniProjGit.addEventListener("click", () => {
 
 //Live button
 //Live for portfolio need to be cooked
-
+const portLive = document.querySelector("#live-portfolio");
+portLive.addEventListener("click", () => {
+  // Open a new tab with the specified URL
+  window.open(
+    "https://ishhookayy.github.io/PortFolio/#projects"
+  );
+  
 //Live for booksky site
 const bookskyLive = document.querySelector("#live-booksky");
 bookskyLive.addEventListener("click", () => {
