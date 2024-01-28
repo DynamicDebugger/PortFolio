@@ -61,14 +61,12 @@ miniProjGit.addEventListener("click", () => {
 });
 
 //Live button
-//Live for portfolio need to be cooked
+//Live for portfolio need to be cooked portfolio
 const portLive = document.querySelector("#live-portfolio");
 portLive.addEventListener("click", () => {
   // Open a new tab with the specified URL
-  window.open(
-    "https://ishhookayy.github.io/PortFolio/#projects"
-  );
-  
+  window.location.reload(true);
+});
 //Live for booksky site
 const bookskyLive = document.querySelector("#live-booksky");
 bookskyLive.addEventListener("click", () => {
@@ -179,17 +177,17 @@ $(document).ready(function () {
 
     //css effect styling for nav-bar dynamicall
 
-        homePage.removeClass(currentBar);
-        aboutPage.removeClass(currentBar);
-        skillsPage.removeClass(currentBar);
-        educationPage.removeClass(remBar);
-        projectPage.removeClass(currentBar);
+    homePage.removeClass(currentBar);
+    aboutPage.removeClass(currentBar);
+    skillsPage.removeClass(currentBar);
+    educationPage.removeClass(remBar);
+    projectPage.removeClass(currentBar);
 
-        homePage.addClass(remBar);
-        aboutPage.addClass(remBar);
-        skillsPage.addClass(remBar);
-        educationPage.addClass(currentBar);
-        projectPage.addClass(remBar);
+    homePage.addClass(remBar);
+    aboutPage.addClass(remBar);
+    skillsPage.addClass(remBar);
+    educationPage.addClass(currentBar);
+    projectPage.addClass(remBar);
   });
 
   //projects page implementation
