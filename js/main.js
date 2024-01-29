@@ -99,6 +99,30 @@ $(document).ready(function () {
     $("#mobile-menu").toggle();
   });
 
+  $("#home").on("click", function () {
+    $("#mobile-menu").hide();
+  });
+
+  $("#about").on("click", function () {
+    $("#mobile-menu").hide();
+  });
+
+  $("#skills").on("click", function () {
+    $("#mobile-menu").hide();
+  });
+
+  $("#education").on("click", function () {
+    $("#mobile-menu").hide();
+  });
+
+  $("#projects").on("click", function () {
+    $("#mobile-menu").hide();
+  });
+
+  $("#connect").on("click", function () {
+    $("#mobile-menu").hide();
+  });
+
   //content passed inside addClass or removeClass
   var remBar = "text-gray-300 hover:bg-gray-700 hover:text-white";
   var currentBar = "bg-gray-900 text-white";
@@ -254,30 +278,6 @@ $(document).ready(function () {
     projectPage.addClass(remBar);
     connectPage.addClass(currentBar);
   });
-
-  $("#connect-validate").validate({
-
-    rules:{
-      name:{
-        required:true,
-      },
-      email:{
-        required:true,
-      },
-      message:{
-        required:true,
-      },
-      phone:{
-        required:true,
-        minlenght:10,
-      },
-    },
-    submitHandler: function(form) {
-      // Handle form submission here (e.g., AJAX submission)
-      alert("Form submitted!");
-      return false; // Prevent the form from submitting normally
-    }
-  });
 });
 
 //EmailJs implementation
@@ -285,10 +285,10 @@ function sendMail() {
   var params = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
-    phn:document.getElementById("phone").value,
+    phn: document.getElementById("phone").value,
     message: document.getElementById("message").value,
   };
-  
+
   const serviceID = "service_93c0i13";
   const templateID = "template_gnc4ol6";
 
