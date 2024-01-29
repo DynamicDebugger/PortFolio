@@ -254,6 +254,24 @@ $(document).ready(function () {
     projectPage.addClass(remBar);
     connectPage.addClass(currentBar);
   });
+
+  $("#connect-validate").validate({
+    rules:{
+      name:{
+        required:true,
+      },
+      email:{
+        required:true,
+      },
+      message:{
+        required:true,
+      },
+      phone:{
+        required:true,
+        minlenght:10,
+      },
+    }
+  });
 });
 
 //EmailJs implementation
@@ -261,7 +279,7 @@ function sendMail() {
   var params = {
     name: document.getElementById("name").value,
     email: document.getElementById("email").value,
-    phn:document.getElementById("phone-no").value,
+    phn:document.getElementById("phone").value,
     message: document.getElementById("message").value,
   };
   
@@ -273,7 +291,7 @@ function sendMail() {
     .then((res) => {
       document.getElementById("name").value = "";
       document.getElementById("email").value = "";
-      document.getElementById("phone-no").value = "";
+      document.getElementById("phone").value = "";
       document.getElementById("message").value = "";
       console.log(res);
       alert("Your message sent successfully!\nThank you for the connection!");
