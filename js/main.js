@@ -264,7 +264,7 @@ function sendMail() {
     phn:document.getElementById("phone-no").value,
     message: document.getElementById("message").value,
   };
-
+  
   const serviceID = "service_93c0i13";
   const templateID = "template_gnc4ol6";
 
