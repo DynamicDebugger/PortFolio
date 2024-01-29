@@ -256,6 +256,7 @@ $(document).ready(function () {
   });
 
   $("#connect-validate").validate({
+
     rules:{
       name:{
         required:true,
@@ -270,6 +271,11 @@ $(document).ready(function () {
         required:true,
         minlenght:10,
       },
+    },
+    submitHandler: function(form) {
+      // Handle form submission here (e.g., AJAX submission)
+      alert("Form submitted!");
+      return false; // Prevent the form from submitting normally
     }
   });
 });
