@@ -94,6 +94,10 @@ $(document).ready(function () {
   var projectDiv = $("#projects");
   var conncetDiv = $("#connect");
 
+  //menu icon reloader
+  $("#menu-icon").on("click", function () {
+    window.location.reload(true);
+  });
   //Mobile Menu bar
   $("#btn-menu").on("click", function () {
     $("#mobile-menu").toggle();
@@ -277,6 +281,48 @@ $(document).ready(function () {
     educationPage.addClass(remBar);
     projectPage.addClass(remBar);
     connectPage.addClass(currentBar);
+  });
+
+  // Flag to track whether click event is bound
+  var clickEventBound = false;
+
+  // Function to handle the logic for medium devices
+  function handleMediumDevices() {
+    if (!clickEventBound) {
+      // Bind click event only if not already bound
+      $("#menu-name").on("click", function () {
+        $("#mobile-menu").toggle();
+      });
+      clickEventBound = true;
+    }
+  }
+
+  // Function to handle the logic for other devices (not medium)
+  function handleOtherDevices() {
+    // Remove click event and hide #mobile-menu
+    $("#menu-name").off("click");
+    $("#mobile-menu").css("display", "none");
+    clickEventBound = false;
+  }
+
+  // Check device width on page load
+  if (window.innerWidth <= 768) {
+    // Medium device
+    handleMediumDevices();
+  } else {
+    // Other devices
+    handleOtherDevices();
+  }
+
+  // Add a resize event listener to handle changes in window size
+  $(window).resize(function () {
+    if (window.innerWidth <= 768) {
+      // Medium device
+      handleMediumDevices();
+    } else {
+      // Other devices
+      handleOtherDevices();
+    }
   });
 });
 

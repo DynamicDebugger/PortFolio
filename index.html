@@ -33,26 +33,26 @@
         
                     Menu open: "hidden", Menu closed: "block"
                   -->
-                        <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="w-6 h-6">
                             <path stroke-linecap="round" stroke-linejoin="round"
-                                d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                                d="M3.75 6A2.25 2.25 0 0 1 6 3.75h2.25A2.25 2.25 0 0 1 10.5 6v2.25a2.25 2.25 0 0 1-2.25 2.25H6a2.25 2.25 0 0 1-2.25-2.25V6ZM3.75 15.75A2.25 2.25 0 0 1 6 13.5h2.25a2.25 2.25 0 0 1 2.25 2.25V18a2.25 2.25 0 0 1-2.25 2.25H6A2.25 2.25 0 0 1 3.75 18v-2.25ZM13.5 6a2.25 2.25 0 0 1 2.25-2.25H18A2.25 2.25 0 0 1 20.25 6v2.25A2.25 2.25 0 0 1 18 10.5h-2.25a2.25 2.25 0 0 1-2.25-2.25V6ZM13.5 15.75a2.25 2.25 0 0 1 2.25-2.25H18a2.25 2.25 0 0 1 2.25 2.25V18A2.25 2.25 0 0 1 18 20.25h-2.25A2.25 2.25 0 0 1 13.5 18v-2.25Z" />
                         </svg>
                         <!--
                     Icon when menu is open.
         
                     Menu open: "block", Menu closed: "hidden"
                   -->
-                        <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
-                            stroke="currentColor" aria-hidden="true">
-                            <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                            class="hidden w-6 h-6">
+                            <!-- Replace with the desired SVG code for the open state -->
                         </svg>
                     </button>
                 </div>
                 <div class="flex flex-1 items-center justify-center lg:items-stretch lg:justify-start">
                     <div class="flex flex-shrink-0 items-center">
-                        <img class="h-8 w-auto" src="images/tab-icon-01.png" alt="Your Company">
-                        <span class="text-white pl-2">Balasubramani Elamurugan</span>
+                        <img id="menu-icon" class="h-8 w-auto" src="images/tab-icon-01.png" alt="Your Company">
+                        <span id="menu-name" class="text-white pl-2">Balasubramani Elamurugan</span>
                     </div>
                     <div class="hidden lg:ml-6 lg:block">
                         <div class="flex space-x-2">
@@ -81,7 +81,7 @@
         </div>
 
         <!-- Mobile menu, show/hide based on menu state. -->
-        <div class="md:hidden" id="mobile-menu">
+        <div class="md:hidden transition ease-in-out delay-200 origin-top" id="mobile-menu">
             <div class="space-y-1 px-2 pb-3 pt-2">
                 <!-- Current: "bg-gray-900 text-white", Default: "text-gray-300 hover:bg-gray-700 hover:text-white" -->
                 <a href="#home" class="homePage bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
@@ -154,8 +154,8 @@
 
     <!-- About section here content needs to be cooked more and well -->
     <div id="about"
-        class="justify-evenly relative top-4 lg:top-10 my-10  sm:py-10 py-5 sm:px-10 px-2.5 md:break-normal break-all w-full text-md sm:text-xl antialiased leading-normal font-bold">
-
+        class="justify-evenly relative top-4 lg:top-10 my-10  sm:py-10 py-5 sm:px-10 px-2.5 md:break-normal break-words w-full text-md sm:text-xl antialiased leading-normal font-semibold">
+        <h3 class="text-center text-3xl font-bold py-2">About</h3>
         <div class="grid lg:grid-cols-3 w-full grid-row-1">
             <div class="lg:col-span-2">
                 <!-- This will take 2/3 of the width on smaller screens and full width on medium and larger screens -->
