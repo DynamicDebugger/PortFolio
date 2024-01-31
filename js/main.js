@@ -126,7 +126,9 @@ $(document).ready(function () {
   $("#connect").on("click", function () {
     $("#mobile-menu").hide();
   });
-
+  $(".options").on("click", function () {
+    $("#mobile-menu").hide();
+  });
   //content passed inside addClass or removeClass
   var remBar = "text-gray-300 hover:bg-gray-700 hover:text-white";
   var currentBar = "bg-gray-900 text-white";
