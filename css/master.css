@@ -38,9 +38,7 @@
         width: 100%;
     }
 
-    #home {
-        background-image: url('/images/portfolio-bg.jpg');
-    }
+    
 
     .type-text {
         position: relative;
