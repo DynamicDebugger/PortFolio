@@ -1,7 +1,7 @@
 const text = document.querySelector(".sec-text");
 const textLoad = () => {
   setTimeout(() => {
-    text.textContent = "Pre-final year student";
+    text.textContent = "Final year student";
   }, 0);
   setTimeout(() => {
     text.textContent = "Web Developer";
@@ -18,6 +18,16 @@ const textLoad = () => {
 };
 textLoad();
 setInterval(textLoad, 20000);
+
+//GitHub for SIS
+const bankAppGit = document.querySelector("#bank-app-git");
+bankAppGit.addEventListener("click", () => {
+  // Open a new tab with the specified URL
+  window.open(
+    "https://github.com/DynamicDebugger/HCL-PT-2-ONLINE-BANKING-SYSTEM",
+    "_blank"
+  );
+});
 
 //GitHub for Portfolio
 const devGit = document.querySelector("#dev-git");
@@ -53,12 +63,14 @@ sisGit.addEventListener("click", () => {
   );
 });
 
-//GitGub for miniProjproject
-const miniProjGit = document.querySelector("#mini-proj-git");
-miniProjGit.addEventListener("click", () => {
-  // Open a new tab with the specified URL
-  window.open("https://github.com/ishhookayy/mini-projects", "_blank");
-});
+// //GitGub for miniProjproject
+// const miniProjGit = document.querySelector("#mini-proj-git");
+// miniProjGit.addEventListener("click", () => {
+//   // Open a new tab with the specified URL
+//   window.open("https://github.com/ishhookayy/mini-projects", "_blank");
+// });
+
+
 
 //Live button
 //Live for portfolio need to be cooked portfolio
