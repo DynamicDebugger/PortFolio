@@ -19,7 +19,7 @@ const textLoad = () => {
 textLoad();
 setInterval(textLoad, 20000);
 
-//GitHub for SIS
+//GitHub for bank
 const bankAppGit = document.querySelector("#bank-app-git");
 bankAppGit.addEventListener("click", () => {
   // Open a new tab with the specified URL
@@ -27,6 +27,13 @@ bankAppGit.addEventListener("click", () => {
     "https://github.com/DynamicDebugger/HCL-PT-2-ONLINE-BANKING-SYSTEM",
     "_blank"
   );
+});
+
+//GitHub for tic-tac-toe
+const ticGit = document.querySelector("#tic-tac-toe-git");
+ticGit.addEventListener("click", () => {
+  // Open a new tab with the specified URL
+  window.open("https://github.com/DynamicDebugger/TIC-TAC-TOE", "_blank");
 });
 
 //GitHub for Portfolio
@@ -85,6 +92,15 @@ bookskyLive.addEventListener("click", () => {
   // Open a new tab with the specified URL
   window.open(
     "https://65b490408a9f9e5701efdbb0--booksky-mini-proj01.netlify.app/",
+    "_blank"
+  );
+});
+//Live for portfolio need to be cooked portfolio
+const ticLive = document.querySelector("#live-tic-tac-toe");
+ticLive.addEventListener("click", () => {
+  // Open a new tab with the specified URL
+  window.open(
+    "https://tic-tac-toe-balasubramani-e.netlify.app/",
     "_blank"
   );
 });
