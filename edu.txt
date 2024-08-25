@@ -1,0 +1,32 @@
+        <div class="flex">
+            <div class="w-1/2 border-r-8 rounded-t-md rounded-b-md border-indigo-500">
+                <!-- Left content goes here -->
+                <div>
+                    <div class="box-content rounded-l-lg mt-1 py-4 pr-2 text-right bg-black">
+                        <h3 class="text-white">BE Computer Science</h3>
+                        <h5 class="text-indigo-500">Sathybama University,Chennai</h5>
+                        <p class="text-sm text-white">CGPA-8.89</p>
+                    </div>
+                </div>
+                <div>
+                    <div class="box-border rounded-l-xl my-12 text-center bg-indigo-500">
+                        <h3 class="text-indigo-800">JUN 2020 - APR 2021 </h3>
+                    </div>
+                </div>
+            </div>
+            <div class="w-1/2 border-l-8 rounded-t-md rounded-b-md border-indigo-500 ">
+                <!-- Right content goes here -->
+                <div>
+                    <div class="box-border rounded-r-xl my-12 text-center bg-indigo-500">
+                        <h3 class="text-indigo-800">SEP 2021 - PRESENT </h3>
+                    </div>
+                </div>
+                <div>
+                    <div class="box-content rounded-r-lg py-4 pl-2 text-left bg-black">
+                        <h3 class="text-white">XII Grade</h3>
+                        <h5 class="text-indigo-500">Mamallan School,Kanchipuram</h5>
+                        <p class="text-sm text-white">CGPA-9.42</p>
+                    </div>
+                </div>
+            </div>
+        </div>

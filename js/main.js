@@ -380,3 +380,68 @@ function sendMail() {
     })
     .catch((err) => console.log(err));
 }
+
+document.addEventListener("DOMContentLoaded", function () {
+  const showMoreButtons = document.querySelectorAll(".show-more");
+  const descriptions = document.querySelectorAll(".description");
+  const popup = document.getElementById("popup");
+  const popupTitle = document.getElementById("popup-title");
+  const popupDescription = document.getElementById("popup-description");
+  const closePopupButton = document.getElementById("close-popup");
+  const projects = document.getElementById("projects");
+
+  // Function to limit the number of words to 100
+  const limitWords = (element, wordLimit) => {
+    const textArray = element.innerText.split(" ");
+    if (textArray.length > wordLimit) {
+      const text = textArray.slice(0, wordLimit).join(" ") + "...";
+      element.dataset.fullText = element.innerHTML; // Save the full text in a data attribute
+      element.innerHTML = text;
+    }
+  };
+
+  // Apply word limit for medium and larger devices
+  const applyWordLimit = () => {
+    if (window.innerWidth >= 768) {
+      descriptions.forEach((description) => limitWords(description, 100));
+    } else {
+      descriptions.forEach((description) => {
+        if (description.dataset.fullText) {
+          description.innerHTML = description.dataset.fullText; // Restore the full text for smaller screens
+        }
+      });
+    }
+  };
+
+  // Initial application
+  applyWordLimit();
+
+  // Reapply word limit on window resize
+  // window.addEventListener("resize", applyWordLimit);
+
+  // Show more button click
+  showMoreButtons.forEach((button) => {
+    button.addEventListener("click", function () {
+      const description = this.previousElementSibling;
+      const fullText = description.dataset.fullText;
+      const title = description.previousElementSibling.innerText;
+
+      popupTitle.innerText = title;
+      popupDescription.innerHTML = fullText;
+      popup.classList.add("active");
+      popup.classList.remove("hidden")
+      projects.classList.add("blur");
+      console.log(document.getElementById("popup"));
+    });
+  });
+
+  // Close popup button click
+  if (closePopupButton) {
+    closePopupButton.addEventListener("click", () => {
+      popup.classList.remove("active");
+      popup.classList.add("hidden");
+      projects.classList.remove("blur");
+    });
+  }
+});
+
