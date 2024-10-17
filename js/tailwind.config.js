@@ -22,6 +22,7 @@ module.exports = {
       colors: {
         portfolio: { 100: "#f5f5dc" },
       },
+      
     },
   },
   plugins: [],
