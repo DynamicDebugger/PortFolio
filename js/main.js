@@ -271,35 +271,21 @@ $(document).ready(function () {
 });
 
 function sendMail() {
-    const sendButton = document.getElementById("send-btn");
-    sendButton.disabled = true;
-    sendButton.textContent = "Sending...";
 
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
-        phone: document.getElementById("phone").value,
+        phn: document.getElementById("phone").value,  // Change this key from phone to phn
         message: document.getElementById("message").value,
     };
 
-    const serviceID = "service_93c0i13";
+    const serviceID = "service_gv0j868";
     const templateID = "template_gnc4ol6";
 
-    emailjs
-        .send(serviceID, templateID, params)
-        .then((res) => {
-            document.getElementById("name").value = "";
-            document.getElementById("email").value = "";
-            document.getElementById("phone").value = "";
-            document.getElementById("message").value = "";
-            alert("Your message was sent successfully!");
-        })
-        .catch((err) => {
-            alert("Failed to send your message. Please try again later.");
-        })
-        .finally(() => {
-            sendButton.disabled = false;
-            sendButton.textContent = "Send";
-        });
-}
+    // Debugging logs to check parameters
+    console.log("Sending email with parameters:", params);
 
+    emailjs.send(serviceID, templateID, params).then(function(res){
+      alert("Hey, "+ document.getElementById("name").value + "!Thank you for connecting!!");
+    });
+}
