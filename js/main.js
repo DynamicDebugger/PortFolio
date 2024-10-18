@@ -284,6 +284,12 @@ function sendMail() {
     emailjs.send(serviceID, templateID, params)
         .then(function(response) {
             alert("Hey, " + params.name + "! Thank you for connecting!!");
+            
+            //clearing input field
+            document.getElementById("name").value = "";
+            document.getElementById("email").value = "";
+            document.getElementById("phone").value = "";
+            document.getElementById("message").value = "";            
             console.log("SUCCESS!", response.status, response.text);
         }, function(error) {
             alert("Oops! Something went wrong. Please try again.");
