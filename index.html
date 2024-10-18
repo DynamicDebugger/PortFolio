@@ -452,144 +452,230 @@
             </ul>
         </div>
     </div>
-
     <div id="projects"
         class="w-full text-md sm:text-xl my-10 lg:my-0 py-16 sm:px-10 px-2.5 leading-normal antialiased font-semibold">
         <h3 class="text-5xl text-center font-bold mb-8">Projects</h3>
-        <div class="container grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
-
+        <div class="container1 grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 gap-8">
             <!-- Developer Portfolio -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/portfolio-sample.png" alt="Developer Portfolio"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">Developer Portfolio</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/PortFolio" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/portfolio-sample.png" alt="Developer Portfolio"
+                            class="project-image">
+                        <h3>Developer Portfolio</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Developer Portfolio</h3>
+                        <p class="project-overview">A personal portfolio showcasing my web development projects and
+                            skills.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-item">HTML</span>
+                            <span class="tech-item">CSS</span>
+                            <span class="tech-item">JavaScript</span>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://github.com/DynamicDebugger/PortFolio" target="_blank"
+                                class="github-link">GitHub</a>
+                            <a href="https://dynamicdebugger.github.io/PortFolio/#home" class="live-link">Live</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Blockchain Voting App -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/voting-blockchain.png" alt="Blockchain Voting App"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">Blockchain Voting App</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/blockchain-voting-app" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/voting-blockchain.png" alt="Blockchain Voting App"
+                            class="project-image">
+                        <h3>Blockchain Voting App</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Blockchain Voting App</h3>
+                        <p class="project-overview">A decentralized voting platform using blockchain for secure and
+                            transparent elections.</p>
+                        <div class="tech-stack">
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">Solidity</span>
+                            <span class="tech-item">Ethereum</span>
+                        </div>
+                        <div class="button-group"><a href="https://github.com/DynamicDebugger/blockchain-voting-app"
+                                target="_blank" class="github-link">GitHub</a></div>
+                    </div>
                 </div>
             </div>
 
             <!-- OD Automation System -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/OD-automation.png" alt="OD Automation System"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">OD Automation System</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/OD-System" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/OD-automation.png" alt="OD Automation System" class="project-image">
+                        <h3>OD Automation System</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>OD Automation System</h3>
+                        <p class="project-overview">Automates the on-duty approval process for students attending
+                            events.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-item">ReactJS</span>
+                            <span class="tech-item">SpringBoot</span>
+                            <span class="tech-item">MongoDB</span>
+                        </div>
+
+                        <div class="button-group">
+                            <a href="https://github.com/DynamicDebugger/OD-System" target="_blank"
+                                class="github-link">GitHub</a>
+                            <a href="https://sathybamaodportal.netlify.app/" class="live-link">Live</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Fullstack Banking Application -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/fullstack-banking.png" alt="Fullstack Banking Application"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">Fullstack Banking Application</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/FullStackBankingApplication" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/fullstack-banking.png" alt="Fullstack Banking Application"
+                            class="project-image">
+                        <h3>Fullstack Banking Application</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Fullstack Banking Application</h3>
+                        <p class="project-overview">An online banking solution for managing accounts, transfers, and
+                            payments.</p>
+                        <div class="tech-stack">
+                            <span class="tech-item">JavaScript</span>
+                            <span class="tech-item">Spring Boot</span>
+                            <span class="tech-item">PostgreSQL</span>
+                        </div>
+                        <div class="button-group"><a
+                                href="https://github.com/DynamicDebugger/FullStackBankingApplication" target="_blank"
+                                class="github-link">GitHub</a></div>
+                    </div>
                 </div>
             </div>
 
             <!-- Text Summarization Web App -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/text-summarizer.png" alt="Text Summarization Web App"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">Text Summarization Web App</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/text-summarizer" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/text-summarizer.png" alt="Text Summarization Web App"
+                            class="project-image">
+                        <h3>Text Summarization Web App</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Text Summarization Web App</h3>
+                        <p class="project-overview">An AI-powered application that summarizes long texts into concise
+                            summaries.</p>
+                        <div class="tech-stack">
+                            <span class="tech-item">Python</span>
+                            <span class="tech-item">Flask</span>
+                            <span class="tech-item">NLP</span>
+                        </div>
+                        <div class="button-group"><a href="https://github.com/DynamicDebugger/text-summarizer"
+                                target="_blank" class="github-link">GitHub</a></div>
+                    </div>
                 </div>
             </div>
 
             <!-- Student Information System -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/sis-sample.png" alt="Student Information System"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">Student Information System</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/StudentInformationManagement" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/sis-sample.png" alt="Student Information System"
+                            class="project-image">
+                        <h3>Student Information System</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Student Information System</h3>
+                        <p class="project-overview">A web-based system for managing student records, grades, and
+                            attendance.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-item">JSP</span>
+                            <span class="tech-item">Servlets</span>
+                            <span class="tech-item">PostgreSQL</span>
+                        </div>
+                        <div class="button-group"><a
+                                href="https://github.com/DynamicDebugger/StudentInformationManagement" target="_blank"
+                                class="github-link">GitHub</a></div>
+                    </div>
                 </div>
             </div>
 
             <!-- RideShare Application -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/rideshare-app.png" alt="RideShare Application"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">RideShare Application</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/rideshare" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/rideshare-app.png" alt="RideShare Application" class="project-image">
+                        <h3>RideShare Application</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>RideShare Application</h3>
+                        <p class="project-overview">A ride-sharing platform that connects riders and drivers for shared
+                            trips.</p>
+                        <div class="tech-stack">
+                            <span class="tech-item">React Native</span>
+                            <span class="tech-item">Firebase</span>
+                            <span class="tech-item">Google Maps API</span>
+                        </div>
+                        <div class="button-group"><a href="https://github.com/DynamicDebugger/rideshare" target="_blank"
+                                class="github-link">GitHub</a></div>
+                    </div>
                 </div>
             </div>
 
             <!-- Hackathon Tracker -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/hackathon-tracker.png" alt="Hackathon Tracker"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">Hackathon Tracker</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/hackathon-tracker" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/hackathon-tracker.png" alt="Hackathon Tracker" class="project-image">
+                        <h3>Hackathon Tracker</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Hackathon Tracker</h3>
+                        <p class="project-overview">Tracks the progress of hackathons, including daily updates and
+                            timelines.</p>
+                        <div class="tech-stack">
+                            <span class="tech-item">HTML\CSS</span>
+                            <span class="tech-item">Firebase</span>
+                            <span class="tech-item">JavaScript</span>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://github.com/DynamicDebugger/hackathon-tracker" target="_blank"
+                                class="github-link">GitHub</a>
+                            <a href="https://dynamicdebugger.github.io/hackathon-tracker/login.html"
+                                class="live-link">Live</a>
+                        </div>
+                    </div>
                 </div>
             </div>
 
             <!-- Online Coding Platform -->
-            <div class="project-card bg-gray-800 border border-gray-900 p-4 rounded-lg relative">
-                <img src="./images/project/coding-platform.png" alt="Online Coding Platform"
-                    class="project-image w-full rounded-lg mb-4">
-                <h3 class="text-2xl font-bold text-center mb-2">Online Coding Platform</h3>
-                <div class="flex justify-center space-x-4 mt-4">
-                    <a href="https://github.com/DynamicDebugger/tallycode" target="_blank"
-                        class="bg-yellow-100 text-gray-800 font-bold px-4 py-2 rounded-md hover:bg-red-400">GitHub</a>
-                </div>
-                <div
-                    class="overlay hidden absolute inset-0 bg-black bg-opacity-70 flex items-center justify-center rounded-lg">
-                    <span class="text-white text-xl font-bold">View Details</span>
+            <div class="project-card">
+                <div class="card-inner">
+                    <div class="card-front">
+                        <img src="./images/project/coding-platform.png" alt="Online Coding Platform"
+                            class="project-image">
+                        <h3>Online Coding Platform</h3>
+                    </div>
+                    <div class="card-back">
+                        <h3>Online Coding Platform</h3>
+                        <p class="project-overview">An interactive coding platform where users can solve coding
+                            challenges.
+                        </p>
+                        <div class="tech-stack">
+                            <span class="tech-item">Next.js</span>
+                            <span class="tech-item">Firebase</span>
+                        </div>
+                        <div class="button-group">
+                            <a href="https://github.com/DynamicDebugger/tallycode" target="_blank"
+                                class="github-link">GitHub</a>
+                            <a href="https://tally-code.vercel.app/" class="live-link">Live</a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
