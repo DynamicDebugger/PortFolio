@@ -271,21 +271,22 @@ $(document).ready(function () {
 });
 
 function sendMail() {
-
     var params = {
         name: document.getElementById("name").value,
         email: document.getElementById("email").value,
-        phn: document.getElementById("phone").value,  // Change this key from phone to phn
+        phone: document.getElementById("phone").value,  // Ensure the key matches the EmailJS template variable
         message: document.getElementById("message").value,
     };
 
-    const serviceID = "service_gv0j868";
-    const templateID = "template_gnc4ol6";
+    const serviceID = "service_13gnh78";  // Update with your actual service ID
+    const templateID = "template_0lqw71e";  // Update with your actual template ID
 
-    // Debugging logs to check parameters
-    console.log("Sending email with parameters:", params);
-
-    emailjs.send(serviceID, templateID, params).then(function(res){
-      alert("Hey, "+ document.getElementById("name").value + "!Thank you for connecting!!");
-    });
+    emailjs.send(serviceID, templateID, params)
+        .then(function(response) {
+            alert("Hey, " + params.name + "! Thank you for connecting!!");
+            console.log("SUCCESS!", response.status, response.text);
+        }, function(error) {
+            alert("Oops! Something went wrong. Please try again.");
+            console.error("FAILED...", error);
+        });
 }
