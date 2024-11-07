@@ -18,214 +18,96 @@ const textLoad = () => {
 };
 textLoad();
 setInterval(textLoad, 20000);
+// NavBar tags and ids
+var homePage = $(".homePage");
+var aboutPage = $(".aboutPage");
+var skillsPage = $(".skillsPage");
+var educationPage = $(".educationPage");
+var projectPage = $(".projectsPage");
+var connectPage = $(".connectPage");
 
-$(document).ready(function () {
-  // NavBar tags and ids
-  var homePage = $(".homePage");
-  var aboutPage = $(".aboutPage");
-  var skillsPage = $(".skillsPage");
-  var educationPage = $(".educationPage");
-  var projectPage = $(".projectsPage");
-  var connectPage = $(".connectPage");
+// Content tags and ids
+var homeDiv = $("#home");
+var aboutDiv = $("#about");
+var skillsDiv = $("#skills");
+var educationDiv = $("#education");
+var projectDiv = $("#projects");
+var connectDiv = $("#connect");
 
-  // Content tags and ids
-  var homeDiv = $("#home");
-  var aboutDiv = $("#about");
-  var skillsDiv = $("#skills");
-  var educationDiv = $("#education");
-  var projectDiv = $("#projects");
-  var conncetDiv = $("#connect");
-
-  //menu icon reloader
-  $("#menu-icon").on("click", function () {
-    window.location.reload(true);
-  });
-  //Mobile Menu bar
-  $("#btn-menu").on("click", function () {
-    $("#mobile-menu").toggle();
-  });
-
-  $("#home").on("click", function () {
-    $("#mobile-menu").hide();
-  });
-
-  $("#about").on("click", function () {
-    $("#mobile-menu").hide();
-  });
-
-  $("#skills").on("click", function () {
-    $("#mobile-menu").hide();
-  });
-
-  $("#education").on("click", function () {
-    $("#mobile-menu").hide();
-  });
-
-  $("#projects").on("click", function () {
-    $("#mobile-menu").hide();
-  });
-
-  $("#connect").on("click", function () {
-    $("#mobile-menu").hide();
-  });
-  $(".options").on("click", function () {
-    $("#mobile-menu").hide();
-  });
-  //content passed inside addClass or removeClass
-  var remBar = "text-gray-300 hover:bg-gray-700 hover:text-white";
-  var currentBar = "bg-gray-900 text-white";
-
-  // Home page implementation
-  homePage.on("click", function () {
+// Ensure only homeDiv is visible on page load
+$(document).ready(function() {
     homeDiv.show();
     aboutDiv.hide();
     skillsDiv.hide();
     educationDiv.hide();
     projectDiv.hide();
-    conncetDiv.hide();
+    connectDiv.hide();
+});
 
-    //css effect styling for nav-bar dynamicall
-    homePage.removeClass(remBar);
-    aboutPage.removeClass(currentBar);
-    skillsPage.removeClass(currentBar);
-    educationPage.removeClass(currentBar);
-    projectPage.removeClass(currentBar);
-    connectPage.removeClass(currentBar);
+// Menu icon reloader
+$("#menu-icon").on("click", function () {
+    window.location.reload(true);
+});
 
-    homePage.addClass(currentBar);
-    aboutPage.addClass(remBar);
-    skillsPage.addClass(remBar);
-    educationPage.addClass(remBar);
-    projectPage.addClass(remBar);
-    connectPage.addClass(remBar);
-  });
+// Mobile Menu toggle
+$("#btn-menu").on("click", function () {
+    $("#mobile-menu").toggle();
+});
 
-  //about page implementation
-  aboutPage.on("click", function () {
-    homeDiv.hide();
-    aboutDiv.show();
-    skillsDiv.hide();
-    educationDiv.hide();
-    projectDiv.hide();
-    conncetDiv.hide();
+// Hide mobile menu on page navigation
+$(".homePage, .aboutPage, .skillsPage, .educationPage, .projectsPage, .connectPage").on("click", function () {
+    $("#mobile-menu").hide();
+});
 
-    //css effect styling for nav-bar dynamicall
-    homePage.removeClass(currentBar);
-    aboutPage.removeClass(remBar);
-    skillsPage.removeClass(currentBar);
-    educationPage.removeClass(currentBar);
-    projectPage.removeClass(currentBar);
-    connectPage.removeClass(currentBar);
+// CSS classes for active/inactive states
+var remBar = "text-gray-300 hover:bg-gray-700 hover:text-white";
+var currentBar = "bg-gray-900 text-white";
 
-    homePage.addClass(remBar);
-    aboutPage.addClass(currentBar);
-    skillsPage.addClass(remBar);
-    educationPage.addClass(remBar);
-    projectPage.addClass(remBar);
-    connectPage.addClass(remBar);
-  });
+// Function to handle active navbar styling
+function activateNavBar(activePage) {
+    const pages = [homePage, aboutPage, skillsPage, educationPage, projectPage, connectPage];
+    pages.forEach(page => page.removeClass(currentBar).addClass(remBar));
+    activePage.removeClass(remBar).addClass(currentBar);
+}
 
-  //skills page implementation
-  skillsPage.on("click", function () {
-    homeDiv.hide();
-    aboutDiv.hide();
-    skillsDiv.show();
-    educationDiv.hide();
-    projectDiv.hide();
-    conncetDiv.hide();
+// Function to show/hide sections
+function showSection(showDiv) {
+    [homeDiv, aboutDiv, skillsDiv, educationDiv, projectDiv, connectDiv].forEach(div => div.hide());
+    showDiv.show();
+}
 
-    // text-gray-300 hover:bg-gray-700 hover:text-white"
+// Page implementations
+homePage.on("click", function () {
+    showSection(homeDiv);
+    activateNavBar(homePage);
+});
 
-    homePage.removeClass(currentBar);
-    aboutPage.removeClass(currentBar);
-    skillsPage.removeClass(remBar);
-    educationPage.removeClass(currentBar);
-    projectPage.removeClass(currentBar);
-    connectPage.removeClass(currentBar);
+aboutPage.on("click", function () {
+    showSection(aboutDiv);
+    activateNavBar(aboutPage);
+});
 
-    homePage.addClass(remBar);
-    aboutPage.addClass(remBar);
-    skillsPage.addClass(currentBar);
-    educationPage.addClass(remBar);
-    projectPage.addClass(remBar);
-    connectPage.addClass(remBar);
-  });
+skillsPage.on("click", function () {
+    showSection(skillsDiv);
+    activateNavBar(skillsPage);
+});
 
-  //education page implementation
-  educationPage.on("click", function () {
-    homeDiv.hide();
-    aboutDiv.hide();
-    skillsDiv.hide();
-    educationDiv.show();
-    projectDiv.hide();
-    conncetDiv.hide();
+educationPage.on("click", function () {
+    showSection(educationDiv);
+    activateNavBar(educationPage);
+});
 
-    //css effect styling for nav-bar dynamicall
+projectPage.on("click", function () {
+    showSection(projectDiv);
+    activateNavBar(projectPage);
+});
 
-    homePage.removeClass(currentBar);
-    aboutPage.removeClass(currentBar);
-    skillsPage.removeClass(currentBar);
-    educationPage.removeClass(remBar);
-    projectPage.removeClass(currentBar);
-    connectPage.removeClass(currentBar);
+connectPage.on("click", function () {
+    showSection(connectDiv);
+    activateNavBar(connectPage);
+});
 
-    homePage.addClass(remBar);
-    aboutPage.addClass(remBar);
-    skillsPage.addClass(remBar);
-    educationPage.addClass(currentBar);
-    projectPage.addClass(remBar);
-    connectPage.addClass(remBar);
-  });
 
-  //projects page implementation
-  projectPage.on("click", function () {
-    homeDiv.hide();
-    aboutDiv.hide();
-    skillsDiv.hide();
-    educationDiv.hide();
-    projectDiv.show();
-    conncetDiv.hide();
-
-    //css effect styling for nav-bar dynamicall
-    homePage.removeClass(currentBar);
-    aboutPage.removeClass(currentBar);
-    skillsPage.removeClass(currentBar);
-    educationPage.removeClass(currentBar);
-    projectPage.removeClass(remBar);
-    connectPage.removeClass(currentBar);
-
-    homePage.addClass(remBar);
-    aboutPage.addClass(remBar);
-    skillsPage.addClass(remBar);
-    educationPage.addClass(remBar);
-    projectPage.addClass(currentBar);
-    connectPage.addClass(remBar);
-  });
-
-  //connect page implementation
-  connectPage.on("click", function () {
-    homeDiv.hide();
-    aboutDiv.hide();
-    skillsDiv.hide();
-    educationDiv.hide();
-    projectDiv.hide();
-    conncetDiv.show();
-
-    //css effect styling for nav-bar dynamicall
-    homePage.removeClass(currentBar);
-    aboutPage.removeClass(currentBar);
-    skillsPage.removeClass(currentBar);
-    educationPage.removeClass(currentBar);
-    projectPage.removeClass(currentBar);
-    connectPage.removeClass(remBar);
-
-    homePage.addClass(remBar);
-    aboutPage.addClass(remBar);
-    skillsPage.addClass(remBar);
-    educationPage.addClass(remBar);
-    projectPage.addClass(remBar);
-    connectPage.addClass(currentBar);
-  });
 
   // Flag to track whether click event is bound
   var clickEventBound = false;
@@ -268,7 +150,6 @@ $(document).ready(function () {
       handleOtherDevices();
     }
   });
-});
 
 function sendMail() {
     var params = {
